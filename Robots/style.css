@@ -1,0 +1,79 @@
+.css-selector
+{
+    background: linear-gradient(308deg, #00ff37, #fffb02);
+    background-size: 400% 400%;
+
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+}
+
+@-webkit-keyframes Gradient
+{
+    0%{background-position:7% 0%}
+    50%{background-position:94% 70%}
+    100%{background-position:7% 0%}
+}
+@-moz-keyframes Gradient
+{
+    0%{background-position:7% 0%}
+    50%{background-position:94% 70%}
+    100%{background-position:7% 0%}
+}
+@keyframes Gradient
+{
+    0%{background-position:7% 0%}
+    50%{background-position:94% 70%}
+    100%{background-position:7% 0%}
+}
+
+
+
+
+.button
+{
+    text-align: center;
+}
+
+button
+{
+    text-align: center;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover
+{
+    background-color: #fb0505;
+    box-shadow: 0px 15px 20px rgba(255, 208, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+button:active
+{
+    transform: translateY(-1px);
+}
+
+.LEMON
+{
+    visibility: hidden;
+    
+}
+
+
+.Flag
+{
+    its not in here
+}
