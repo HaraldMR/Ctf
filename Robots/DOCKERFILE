@@ -7,6 +7,10 @@ RUN apt-get update && apt-get install -y apache2 && apt-get install -y git
 RUN git clone https://github.com/HaraldMR/Ctf.git
 
 RUN cp Ctf/Robots/index.html /var/www/html
+RUN cp Ctf/Robots/robots.txt /var/www/html/robots.txt
+RUN cp Ctf/Robots/style.css /var/www/html/style.css
+RUN cp Ctf/Robots/scripts.js /var/www/html/scripts.js
+
 
 EXPOSE 80
 
