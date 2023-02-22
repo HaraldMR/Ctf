@@ -13,3 +13,6 @@ The password is a password among the top 10k most common passwords.
 
 
 Use John the Ripper to crack the pdf.
+
+
+The password is demo
