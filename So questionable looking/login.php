@@ -7,7 +7,7 @@ $password = $_POST['password'];
 $conn = mysqli_connect(getenv('DB_HOST'), getenv('DB_USER'), getenv('DB_PASS'));
 
 // Select the database to use
-mysqli_select_db($conn, 'ctf_challenge');
+mysqli_select_db($conn, 'ctf_DB');
 
 // Construct the SQL query to check if the user exists
 $query = "SELECT * FROM users WHERE username = '{$username}' AND password = '{$password}'";
@@ -19,7 +19,7 @@ $result = mysqli_query($conn, $query);
 if (mysqli_num_rows($result) > 0) {
 	// The user exists, log them in
 	$row = mysqli_fetch_assoc($result);
-	if ($row['username'] == 'admin' && $row['password'] == 'password') {
+	if ($row['username'] == 'admin' && $row['password'] == 'ilikepasswordsthatarelongandhardtoremember') {
 		// Redirect to flag page
 		header('Location: flag.php');
 		exit;

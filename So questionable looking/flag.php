@@ -8,5 +8,5 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 }
 
 // Display the flag here
-echo "Nicely done: CTFkom{D4T4b4s3S_R_DuM}";
+echo "Nicely done! CTFkom{D4T4b4s3S_R_DuM}";
 ?>
