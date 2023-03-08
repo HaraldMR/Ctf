@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$_SESSION['loggedin'] = false;
 // Check if the login form has been submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Retrieve the username and password from the POST request
@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header('Location: flag.php');
         exit;
     } else {
+        $_SESSION['loggedin'] = false;
         echo "Login failed.";
     }
 }
