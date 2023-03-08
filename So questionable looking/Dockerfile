@@ -8,6 +8,7 @@ COPY index.html /var/www/html/
 COPY login.php /var/www/html/
 COPY style.css /var/www/html/
 COPY flag.php /var/www/html/
+COPY .htaccess /var/www/html/
 COPY init.sql /docker-entrypoint-initdb.d/
 
 EXPOSE 80
