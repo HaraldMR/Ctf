@@ -1,7 +1,26 @@
-<!DOCTYPE html>
+<?php
+session_start();
+
+// Check if the login form has been submitted
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Retrieve the username and password from the POST request
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if ($username == 'admin' && $password == 'takethis') {
+        // Set session variables to indicate that the user is logged in
+        $_SESSION['loggedin'] = true;
+
+        // Redirect to flag page
+        header('Location: flag.php');
+        exit;
+    } else {
+        echo "Login failed.";
+    }
+}
+?>
 <html>
 <head>
-	<title>Login Page</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -19,22 +38,5 @@
 	</div>
 
 	<script src="script.js"></script>
-
-	<?php
-		// Check if the login form has been submitted
-		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-			// Retrieve the username and password from the POST request
-			$username = $_POST['username'];
-			$password = $_POST['password'];
-
-            if ($username == 'admin' && $password == 'takethis') {
-                // Redirect to flag page
-                header('Location: flag.php');
-                exit;
-            } else {
-                echo "Login failed.";
-            }
-		}
-	?>
 </body>
 </html>
