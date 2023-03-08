@@ -1,10 +1,8 @@
 FROM ubuntu
 
-RUN apt-get update -y 
-RUN apt-get upgrade -y 
-RUN apt-get install -y apache2 
-RUN apt-get install -y mysql-server 
-RUN apt-get install -y php
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y apache2 mysql-server php
 
 COPY index.html /var/www/html/
 COPY login.php /var/www/html/
