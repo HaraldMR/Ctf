@@ -18,8 +18,14 @@ $result = mysqli_query($conn, $query);
 // Check if the query returned any rows
 if (mysqli_num_rows($result) > 0) {
 	// The user exists, log them in
-	header('Location: flag.php');
-	exit;
+	$row = mysqli_fetch_assoc($result);
+	if ($row['username'] == 'admin' && $row['password'] == 'password') {
+		// Redirect to flag page
+		header('Location: flag.php');
+		exit;
+	} else {
+		echo "<h1>Login failed.</h1>";
+	}
 } else {
 	// The user does not exist or the password is incorrect
 	echo "<h1>Login failed.</h1>";

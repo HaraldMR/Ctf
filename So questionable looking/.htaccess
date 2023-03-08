@@ -15,3 +15,9 @@
   Order allow,deny
   Allow from all
 </Files>
+
+# Allow access to login.php
+<Files "style.css">
+  Order allow,deny
+  Allow from all
+</Files>
