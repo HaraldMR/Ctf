@@ -1,1 +1,17 @@
-Deny from all
+# Block access to all files except index.html and login.php
+<FilesMatch "^(?!index\.html|login\.php).*$">
+  Order deny,allow
+  Deny from all
+</FilesMatch>
+
+# Allow access to index.html
+<Files "index.html">
+  Order allow,deny
+  Allow from all
+</Files>
+
+# Allow access to login.php
+<Files "login.php">
+  Order allow,deny
+  Allow from all
+</Files>
