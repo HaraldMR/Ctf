@@ -43,7 +43,7 @@
 			if (mysqli_num_rows($result) > 0) {
 				// The user exists, log them in
 				$row = mysqli_fetch_assoc($result);
-				if ($row['username'] == 'admin' && $row['password'] == 'ilikepasswordsthatarelongandhardtoremember') {
+				if ($row['username'] == 'admin' && $row['password'] == 'password') {
 					// Redirect to flag page
 					header('Location: flag.php');
 					exit;
