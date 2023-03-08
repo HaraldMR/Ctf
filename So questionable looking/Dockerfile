@@ -4,6 +4,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y apache2 mysql-server php
 
+RUN a2enmod rewrite
+RUN sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
+
 COPY index.html /var/www/html/
 COPY login.php /var/www/html/
 COPY style.css /var/www/html/
