@@ -14,6 +14,7 @@ COPY xinetd /etc/xinetd.d/snaak
 WORKDIR /home/snaak
 
 RUN chown -R root:root . && \
+    chmod 755 /home/snaak && \
     chmod 444 flag.txt && \
     chmod a+x snak && \
     chmod +x /run.sh
