@@ -11,7 +11,7 @@ COPY app /home/snaak/
 COPY run.sh /
 COPY xinetd /etc/xinetd.d/snaak
 
-WORKDIR /home/user
+WORKDIR /home/snaak
 
 RUN chown -R root:root . && \
     chmod 444 flag.txt && \
