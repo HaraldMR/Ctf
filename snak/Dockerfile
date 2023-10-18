@@ -5,11 +5,11 @@ RUN apt-get update -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN useradd -m user
+RUN useradd -m snaak
 
-COPY app /home/user/
+COPY app /home/snaak/
 COPY run.sh /
-COPY xinetd /etc/xinetd.d/user
+COPY xinetd /etc/xinetd.d/snaak
 
 WORKDIR /home/user
 

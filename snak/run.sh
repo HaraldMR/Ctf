@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cd /home/user && ./snak
+cd /home/snaak && ./snak

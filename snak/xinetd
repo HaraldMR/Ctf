@@ -6,6 +6,6 @@ service challenge
     protocol    = tcp
     port        = 1337
     wait        = no
-    user        = user
+    user        = snaak
     server      = /run.sh
 }
