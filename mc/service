@@ -1,0 +1,31 @@
+[Unit]
+
+Description=Minecraft Server
+
+After=network.target
+
+[Service]
+
+User=ubuntu
+
+Nice=1
+
+KillMode=none
+
+SuccessExitStatus=0 1
+
+ProtectHome=true
+
+ProtectSystem=full
+
+PrivateDevices=true
+
+NoNewPrivileges=true
+
+WorkingDirectory=/var/minecraft/server
+
+ExecStart=java -Xmx6G -Xms6G -jar paper.jar --nogui
+
+[Install]
+
+WantedBy=multi-user.target
