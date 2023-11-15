@@ -1,7 +1,7 @@
-FROM ubuntu:focal
+FROM ubuntu
 
 RUN apt-get update -y && \
-    apt-get install -y xinetd strace libseccomp-dev && \
+    apt-get install -y xinetd strace libseccomp-dev build-essential && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
