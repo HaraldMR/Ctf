@@ -7,6 +7,7 @@ int check_key(int key) {
 int main() {
     int user_key;
     printf("Enter the key: ");
+    fflush(stdout);
     scanf("%d", &user_key);
 
     if (check_key(user_key)) {
