@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cd /home/user && ./saveme
+cd /home/sloth && ./sloth

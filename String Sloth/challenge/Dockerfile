@@ -5,17 +5,17 @@ RUN apt-get update -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN useradd -m user
+RUN useradd -m sloth
 
-COPY app /home/user/
+COPY app /home/sloth/
 COPY run.sh /
-COPY xinetd /etc/xinetd.d/user
+COPY xinetd /etc/xinetd.d/sloth
 
-WORKDIR /home/user
+WORKDIR /home/sloth
 
 RUN chown -R root:root . && \
     chmod 444 flag.txt && \
-    chmod a+x saveme ld-2.31.so libc-2.31.so libseccomp.so.2.5.1 && \
+    chmod a+x sloth && \
     chmod +x /run.sh
 
 EXPOSE 1337

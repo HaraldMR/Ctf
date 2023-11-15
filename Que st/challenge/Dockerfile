@@ -5,17 +5,17 @@ RUN apt-get update -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN useradd -m user
+RUN useradd -m quest
 
-COPY app /home/user/
+COPY app /home/quest/
 COPY run.sh /
-COPY xinetd /etc/xinetd.d/user
+COPY xinetd /etc/xinetd.d/quest
 
-WORKDIR /home/user
+WORKDIR /home/quest
 
 RUN chown -R root:root . && \
     chmod 444 flag.txt && \
-    chmod a+x saveme ld-2.31.so libc-2.31.so libseccomp.so.2.5.1 && \
+    chmod a+x quest && \
     chmod +x /run.sh
 
 EXPOSE 1337
