@@ -7,7 +7,9 @@ RUN apt-get update -y && \
 
 RUN useradd -m sloth
 
+COPY sloth.c /home/sloth/
 COPY app /home/sloth/
+RUN gcc -o /home/sloth/app/sloth /home/sloth/sloth.c
 COPY run.sh /
 COPY xinetd /etc/xinetd.d/sloth
 
