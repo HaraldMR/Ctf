@@ -3,6 +3,7 @@
 
 int main() {
     char secret_code[50];
+    system("clear");
     printf("Enter the secret code: ");
     scanf("%49s", secret_code);
 
