@@ -17,7 +17,7 @@ void xor_encrypt_decrypt(char *input, char *output, int key) {
 }
 
 int main() {
-    char encrypted_msg[] = {"CTFkom{3ncrypt10n_might_be_too_easy}}"};
+    char encrypted_msg[] = {"CTFkom{3ncrypt10n_might_be_too_easy}"};
     int key = get_key();
     
     char decrypted_msg[sizeof(encrypted_msg)];
