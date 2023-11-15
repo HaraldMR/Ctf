@@ -15,7 +15,7 @@ COPY xinetd /etc/xinetd.d/sloth
 
 WORKDIR /home/sloth
 
-RUN chown -R root:root . && \
+RUN chown -R sloth:sloth . && \
     chmod 444 flag.txt && \
     chmod a+x sloth && \
     chmod +x /run.sh
