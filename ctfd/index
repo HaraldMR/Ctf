@@ -1,0 +1,18 @@
+<!-- 01111000 01101111 01110010 00100010 01010011 01001001 01001011 01010100 00100010 -->
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <img class="w-100 mx-auto d-block" style="max-width: 700px;padding: 50px;padding-top: 14vh;" src="https://cms.sikt.no/sites/default/files/inline-images/Sikt-Prim%C3%A6rlogo-Lys.png" />
+		<h2 class="text-center">
+            <p></p><br>
+            <p>- Login CTF -</p>
+          	<p>Capture The Flag</p><br>
+        </h2>
+        <h3 class="text-center">
+        <br>
+			<p>Made by CTFkom</p><br>
+            <p>Rules: <a href="https://ctf.login.no/rules">https://ctf.login.no/rules</a></p>
+        </h3>
+        <br>
+    </div>
+</div>
+<!--07 21 22 27 73 20 38 74 3D 26 3F 74 32 69 3B 35 21 3D 6B 3B 35 69 3F 3C 36 69 08 00 15 69 71 79 7A-->

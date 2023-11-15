@@ -17,7 +17,7 @@ void xor_encrypt_decrypt(char *input, char *output, int key) {
 }
 
 int main() {
-    char encrypted_msg[] = {NeeeeeiKaIAlgeDage};
+    char encrypted_msg[] = {"NeeeeeiKaIAlgeDage"};
     int key = get_key();
     
     char decrypted_msg[sizeof(encrypted_msg)];
