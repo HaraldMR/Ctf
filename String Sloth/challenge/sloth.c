@@ -3,8 +3,8 @@
 
 int main() {
     char secret_code[50];
-    system("clear");
     printf("Enter the secret code: ");
+    fflush(stdout);
     scanf("%49s", secret_code);
 
     if (strcmp(secret_code, "DontLetASlothTypeThisItWouldTakeAYear") == 0) {
