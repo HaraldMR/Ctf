@@ -18,8 +18,9 @@ RUN a2enmod ssl && a2ensite default-ssl
 COPY unnamed/* /var/www/html
 
 # Set ownership and permissions for the Git repository
-RUN chown -R gituser:gituser /var/www/html/* && \
-    chmod -R 700 /var/www/html/*
+RUN chmod -R 700 /var/www/html/*
+
+COPY 10o2r-23njy2-ekui2o1-2o1j2o1.jpg /var/www/html
 
 # Start Apache service
 CMD ["apache2-foreground"]
