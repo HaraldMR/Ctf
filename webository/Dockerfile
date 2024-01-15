@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y git
 RUN useradd -ms /bin/bash gituser
 
 # Copy the contents of your Git repository to the Apache document root
-ADD unnamed /var/www/html
+COPY unnamed /var/www/html
 
 # Set ownership and permissions for the Git repository
 RUN chmod -R 700 /var/www/html/README.md
