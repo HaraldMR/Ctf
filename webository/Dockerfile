@@ -1,18 +1,13 @@
-# Use a base image with Apache and PHP
 FROM php:apache
 
-# Expose port 443 for HTTPS
-EXPOSE 443
+# Expose port 80 for HTTP
+EXPOSE 80
 
 # Install Git
 RUN apt-get update && apt-get install -y git
 
 # Create a non-root user for Git repository access
 RUN useradd -ms /bin/bash gituser
-
-# Set up Apache configuration for HTTPS
-COPY ssl.conf /etc/apache2/sites-available/default-ssl.conf
-RUN a2enmod ssl && a2ensite default-ssl
 
 # Copy your Git repository to the Apache document root
 COPY unnamed/* /var/www/html
