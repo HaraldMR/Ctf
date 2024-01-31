@@ -47,8 +47,6 @@ RUN echo "jonas:cyanide" | chpasswd
 
 COPY flag /home/jonas/
 
-RUN ufw allow 20000:21000/tcp
-
 # Expose the FTP port
 EXPOSE 20344
 
