@@ -47,6 +47,8 @@ RUN echo "jonas:cyanide" | chpasswd
 
 COPY flag /home/jonas/
 
+RUN iptables -I INPUT -p tcp --destination-port 20000:21000 -j ACCEPT
+
 # Expose the FTP port
 EXPOSE 20344
 
