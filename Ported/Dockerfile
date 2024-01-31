@@ -50,7 +50,8 @@ RUN echo "jonas:cyanide" | chpasswd
 COPY flag /home/jonas/
 
 # Expose the FTP port
-EXPOSE 20344
+EXPOSE 20000-21000
+EXPOSE 20
 
 # Start the VSFTPD server
 CMD ["vsftpd", "/etc/vsftpd.conf"]
