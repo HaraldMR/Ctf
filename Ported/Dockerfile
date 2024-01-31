@@ -21,9 +21,6 @@ RUN echo "chroot_list_enable=NO" >> /etc/vsftpd.conf  # Disable chroot_list
 RUN echo "secure_chroot_dir=/var/ftp" >> /etc/vsftpd.conf
 RUN echo "allow_writeable_chroot=YES" >> /etc/vsftpd.conf
 RUN echo "pam_service_name=vsftpd" >> /etc/vsftpd.conf
-RUN echo "pasv_address=16.170.217.213" >> /etc/vsftpd.conf
-RUN echo "pasv_min_port=20000" >> /etc/vsftpd.conf
-RUN echo "pasv_max_port=21000" >> /etc/vsftpd.conf
 
 
 
