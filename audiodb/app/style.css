@@ -1,0 +1,101 @@
+*   {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	background-color: #131313;
+	color: #97d3f4;
+	background-position: center;
+	background-size: cover;
+}
+
+iframe {
+	width: 100%;
+	height: 100;
+}
+
+li {
+	margin-bottom: 0.25rem;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+audio {
+	height:30px;
+	width:100%;
+}
+
+section {
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #281343;
+	padding: 1rem 2rem;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+}
+
+@media screen and (max-width: 720px) {
+	section {
+		padding: 1rem 1rem;
+	}
+}
+
+section > *:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+	section h1 {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+a {
+	font-style: italic;
+	color:rgb(186, 128, 210);
+	text-decoration: none;
+}
+a:hover {
+	color: #8439d0;
+}
+
+#playlist1,
+#playlist2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure the playlist takes full width */
+    padding-top: 1rem;
+}
+
+#playlist1 li,
+#playlist2 li {
+    display: flex;
+    justify-content: space-between; /* This will place the span at the end */
+    align-items: center;
+    margin-bottom: 1.3rem;
+    padding: 0 1rem; /* Padding inside each list item */
+    border-bottom: 1px solid; /* Border for the underline */
+}
+
+#playlist1 li a,
+#playlist2 li a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: inherit; /* Keeps the text color consistent with the li element */
+    flex: 1; /* Allows the text to expand and push the span to the edge */
+    white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+#playlist1 .active a, #playlist2 .active a {
+    color: rgb(83, 148, 233); /* Active track color */
+}
