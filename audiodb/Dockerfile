@@ -8,8 +8,8 @@ COPY ./app/ /var/www/html/
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 555 /var/www/html
 
-# Set the Apache server to listen on port 40007
-EXPOSE 40007
+# Set the Apache server to listen on port 80
+EXPOSE 80
 
 # Start the Apache server
 CMD ["httpd-foreground"]
