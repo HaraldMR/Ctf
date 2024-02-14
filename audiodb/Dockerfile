@@ -1,5 +1,9 @@
 # Use the official Apache base image
-FROM httpd:latest
+FROM ubuntu
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y apache2
 
 # Copy the website files to the Apache document root directory
 COPY ./app/ /var/www/html/
@@ -12,4 +16,4 @@ RUN chown -R www-data:www-data /var/www/html \
 EXPOSE 80
 
 # Start the Apache server
-CMD ["httpd-foreground"]
+ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
