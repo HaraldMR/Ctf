@@ -21,7 +21,9 @@ RUN echo "chroot_list_enable=NO" >> /etc/vsftpd.conf  # Disable chroot_list
 RUN echo "secure_chroot_dir=/var/ftp" >> /etc/vsftpd.conf
 RUN echo "allow_writeable_chroot=YES" >> /etc/vsftpd.conf
 RUN echo "pam_service_name=vsftpd" >> /etc/vsftpd.conf
-RUN echo "pasv_address=16.170.217.213" >> /etc/vsftpd.conf
+RUN echo "pasv_enable=YES" >> /etc/vsftpd.conf  # Ensure passive mode is explicitly enabled
+RUN echo "pasv_addr_resolve=NO" >> /etc/vsftpd.conf
+RUN echo "pasv_address=10.212.172.46" >> /etc/vsftpd.conf
 RUN echo "pasv_min_port=20000" >> /etc/vsftpd.conf
 RUN echo "pasv_max_port=21000" >> /etc/vsftpd.conf
 
@@ -48,7 +50,8 @@ RUN echo "jonas:cyanide" | chpasswd
 COPY flag /home/jonas/
 
 # Expose the FTP port
-EXPOSE 20344
+EXPOSE 20000-21000
+EXPOSE 20
 
 # Start the VSFTPD server
 CMD ["vsftpd", "/etc/vsftpd.conf"]
